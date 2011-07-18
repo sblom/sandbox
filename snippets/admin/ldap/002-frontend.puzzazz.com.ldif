@@ -1,0 +1,58 @@
+# Create top-level object in domain
+dn: dc=puzzazz,dc=com
+objectClass: top
+objectClass: dcObject
+objectclass: organization
+o: Puzzazz, Inc.
+dc: Puzzazz
+description: Puzzazz LDAP
+
+# Admin user.
+dn: cn=admin,dc=puzzazz,dc=com
+objectClass: simpleSecurityObject
+objectClass: organizationalRole
+cn: admin
+description: LDAP administrator
+userPassword: GENERATE A PASSWORD using slappasswd
+
+dn: ou=people,dc=puzzazz,dc=com
+objectClass: organizationalUnit
+ou: people
+
+dn: ou=groups,dc=puzzazz,dc=com
+objectClass: organizationalUnit
+ou: groups
+
+dn: uid=sblom,ou=people,dc=puzzazz,dc=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+uid: sblom
+sn: Blomquist
+givenName: Scott
+cn: Scott Blomquist
+displayName: Scott Blomquist
+uidNumber: 1000
+gidNumber: 10000
+userPassword: MAKE UP SOME TEMPORARY PASSWORD HERE
+gecos: Scott Blomquist
+loginShell: /bin/bash
+homeDirectory: /home/sblom
+shadowExpire: -1
+shadowFlag: 0
+shadowWarning: 7
+shadowMin: 8
+shadowMax: 999999
+shadowLastChange: 10877
+mail: sblom@puzzazz.com
+postalCode: 98008
+l: Redmond
+o: Puzzazz
+mobile: +1 (707) 901-7899
+title: Director of Engineering
+initials: SAB
+
+dn: cn=puzzazz,ou=groups,dc=puzzazz,dc=com
+objectClass: posixGroup
+cn: puzzazz
+gidNumber: 10000

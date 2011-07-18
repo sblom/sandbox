@@ -1,0 +1,4 @@
+dn: olcDatabase={1}hdb,cn=config
+changetype: modify
+replace: olcDbIndex
+olcDbIndex: uid,uidNumber,gidNumber,member,memberUid,uniqueMember,objectClass,cn eq

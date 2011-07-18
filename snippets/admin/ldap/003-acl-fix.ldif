@@ -1,0 +1,13 @@
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+add: olcRootDN
+olcRootDN: cn=admin,cn=config
+
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+replace: olcRootPW
+olcRootPW: PASSWORD GENERATED USING slappasswd
+
+dn: olcDatabase={0}config,cn=config
+changetype: modify
+delete: olcAccess
