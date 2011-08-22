@@ -1,0 +1,1 @@
+@reboot echo It worked... > /root/worked.txt
